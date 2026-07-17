@@ -149,6 +149,19 @@ Through this project, I gained practical experience in:
 - Git and GitHub version control
 - Building end-to-end ML applications
 
+  ---
+
+## Note
+
+The trained machine learning model (`rainfall_model.pkl`) is not included in this repository because its size (~206 MB) exceeds GitHub's 100 MB file size limit for regular repositories.
+
+To run this project locally, you can either:
+
+- Train the Random Forest model using the original dataset and save it as `rainfall_model.pkl`, or
+- Use Git LFS if you wish to version large model files.
+
+The application code, project structure, and deployment workflow are fully included in this repository.
+
 ---
 
 ## Author
