@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rainfall Prediction</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 25px;
+            width: 380px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+            overflow-y: auto;
+            max-height: 90vh;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        h3 {
+            text-align: center;
+            margin-top: 15px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🌧️ Rainfall Prediction</h1>
+
+        <form action="/predict" method="post">
+
+            <label>Humidity3pm</label>
+            <input type="number" step="any" name="f1" required>
+
+            <label>Pressure3pm</label>
+            <input type="number" step="any" name="f2" required>
+
+            <label>Humidity9am</label>
+            <input type="number" step="any" name="f3" required>
+
+            <label>Rainfall</label>
+            <input type="number" step="any" name="f4" required>
+
+            <label>Sunshine</label>
+            <input type="number" step="any" name="f5" required>
+
+            <label>Pressure9am</label>
+            <input type="number" step="any" name="f6" required>
+
+            <label>WindGustSpeed</label>
+            <input type="number" step="any" name="f7" required>
+
+            <label>Temp3pm</label>
+            <input type="number" step="any" name="f8" required>
+
+            <label>MinTemp</label>
+            <input type="number" step="any" name="f9" required>
+
+            <label>MaxTemp</label>
+            <input type="number" step="any" name="f10" required>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        <h3>{{ prediction_text }}</h3>
+    </div>
+</body>
+</html>
